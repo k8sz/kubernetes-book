@@ -1,0 +1,64 @@
+{
+    "title": "Kubernetes",
+    "description": "Kubernetes",
+    "language": "zh-hans",
+    "author": "ZB",
+    "links": {
+        "sidebar": {
+        }
+    },
+    "plugins": [
+        "github",
+        "codesnippet",
+        "splitter",
+        "page-toc-button",
+        "image-captions",
+        "editlink",
+        "back-to-top-button",
+        "-lunr", "-search", "search-plus",
+        "github-buttons@2.1.0",
+        "favicon@^0.0.2",
+        "tbfed-pagefooter@^0.0.1",
+        "theme-default",
+        "-highlight", "prism", "prism-themes",
+        "sitemap-general",
+        "lightbox",
+        "copy-code-button",
+        "alerts"
+    ],
+    "pluginsConfig": {
+        "theme-default": {
+            "showLevel": true
+        },
+        "github": {
+            "url": "https://github.com/k8sz"
+        },
+        "editlink": {
+            "base": "https://github.com/k8sz",
+            "label": "编辑本页"
+        },
+        "image-captions": {
+            "caption": "图片 - _CAPTION_"
+        },
+        "github-buttons": {
+            "repo": "k8sz/kubernetes-book",
+            "types": ["star"],
+            "size": "small"
+        },
+        "tbfed-pagefooter": {
+            "copyright": "<p><a href=https:www.k8sz.com>ZB</a>"
+        },
+        "favicon": {
+            "shortcut": "favicon.ico",
+            "bookmark": "favicon.ico"
+        },
+        "prism": {
+            "css": [
+            "prism-themes/themes/prism-ghcolors.css"
+            ]
+        },
+        "sitemap-general": {
+            "prefix": "https://www.k8sz.com/book/"
+        }
+    }
+}
