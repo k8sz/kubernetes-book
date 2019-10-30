@@ -31,10 +31,10 @@
             "showLevel": true
         },
         "github": {
-            "url": "https://github.com/k8sz"
+            "url": "https://github.com/k8sz/kubernetes-book"
         },
         "editlink": {
-            "base": "https://github.com/k8sz",
+            "base": "https://github.com/k8sz/kubernetes-book",
             "label": "编辑本页"
         },
         "image-captions": {
