@@ -494,5 +494,3 @@ spec:
 - 在您的工具中，请注意一段时间之后仍未绑定的 PVC，并向用户展示它们，因为这表示集群可能没有动态存储支持（在这种情况下用户应创建匹配的 PV），或集群没有存储系统（在这种情况下用户不能部署需要 PVC 的配置）。
 
 原文地址：https://kubernetes.io/docs/concepts/storage/persistent-volumes/
-
-译者：[rootsongjc](https://github.com/rootsongjc)

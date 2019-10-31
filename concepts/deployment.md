@@ -50,13 +50,9 @@ kubectl set image deployment/nginx-deployment nginx=nginx:1.9.1
 
 回滚：
 
-```
+```shell
 kubectl rollout undo deployment/nginx-deployment
 ```
-
-## Deployment 结构示意图
-
-![kubernetes deployment cheatsheet](../images/deployment-cheatsheet.png)
 
 ## Deployment 概念详细解析
 

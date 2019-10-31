@@ -186,5 +186,3 @@ podsecuritypolicy "permissive" deleted
 PodSecurityPolicy 认证使用所有可用的策略，包括创建 Pod 的用户，Pod 上指定的服务账户（service acount）。当 Pod 基于 Deployment、ReplicaSet 创建时，它是创建 Pod 的 Controller Manager，所以如果基于非安全 API 端口运行，允许所有的 PodSecurityPolicy 对象，并且不能够有效地实现细分权限。用户访问给定的 PSP 策略有效，仅当是直接部署 Pod 的情况。当直接部署 Pod 时，应用 PodSecurityPolicy 控制基于角色和组的已授权容器的访问 。
 
 原文地址：https://k8smeetup.github.io/docs/concepts/policy/pod-security-policy/
-
-译者：[shirdrn](https://github.com/shirdrn)

@@ -1,2 +1,2 @@
-# Introduction
-
+# Kubernetes学习笔记
+本书主要记录在学习Kubernetes学习中遇到的问题，解决方法和一些个人见解

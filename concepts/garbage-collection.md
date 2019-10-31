@@ -132,5 +132,3 @@ kubectl delete replicaset my-repset --cascade=false
 [其它已知的问题](https://github.com/kubernetes/kubernetes/issues/26120)
 
 原文地址：https://k8smeetup.github.io/docs/concepts/workloads/controllers/garbage-collection/
-
-译者：[shirdrn](https://github.com/shirdrn)
