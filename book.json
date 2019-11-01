@@ -34,7 +34,7 @@
             "url": "https://github.com/k8sz/kubernetes-book"
         },
         "editlink": {
-            "base": "https://github.com/k8sz/kubernetes-book",
+            "base": "https://github.com/k8sz/kubernetes-book/blob/master/",
             "label": "编辑本页"
         },
         "image-captions": {
