@@ -57,24 +57,24 @@ data:
 ```
 配置文件关闭了istio，sonarqube，metrics_server之前有安装所以这里不安装，日志保存30天，开启storageClass参考[kubernetes 挂载阿里云nas存储作为StorageClass](https://www.k8sz.com/post/kubenetes-nas-storageclass),开启账户可以多终端登录
 ### 配置文件参数
-| 参数                             | 描述                                                         | 默认值                                                       |      |
-| -------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| kube_apiserver_host              | 当前集群kube-apiserver地址（ip:port）                        |                                                              |      |
-| etcd_tls_enable                  | 是否开启etcd TLS证书认证（True / False）                     | True                                                         |      |
-| etcd_endpoint_ips                | etcd地址，如etcd为集群，地址以逗号分离（如：192.168.0.7,192.168.0.8,192.168.0.9） |                                                              |      |
-| etcd_port                        | etcd端口 (默认2379，如使用其它端口，请配置此参数)            | 2379                                                         |      |
-| disableMultiLogin                | 是否关闭多点登录  （True / False）                           | True                                                         |      |
-| elk_prefix                       | 日志索引                                                     | logstash                                                     |      |
-| keep_log_days                    | 日志留存时间（天）                                           | 7                                                            |      |
-| metrics_server_enable            | 是否安装metrics_server    （True / False）                   | True                                                         |      |
-| istio_enable                     | 是否安装istio       （True / False）                         | True                                                         |      |
-| persistence                      | enable                                                       | 是否启用持久化存储  （True /  False）（非测试环境建议开启数据持久化） |      |
-| storageClass                     | 启用持久化存储要求环境中存在已经创建好的 StorageClass（默认为空，则使用 default StorageClass） | “”                                                           |      |
-| containersLogMountedPath（可选） | 容器日志挂载路径                                             | "/var/lib/docker/containers"                                 |      |
-| external_es_url（可选）          | 外部es地址，支持对接外部es用                                 |                                                              |      |
-| external_es_port（可选）         | 外部es端口，支持对接外部es用                                 |                                                              |      |
-| local_registry (离线部署使用)    | 离线部署时，对接本地仓库 （使用该参数需将安装镜像使用scripts/download-docker-images.sh导入本地仓库中） |                                                              |      |
-运行部署
+| 参数                             | 描述                                                         | 默认值                                                       |
+| -------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| kube_apiserver_host              | 当前集群kube-apiserver地址（ip:port）                        |                                                              |
+| etcd_tls_enable                  | 是否开启etcd TLS证书认证（True / False）                     | True                                                         |
+| etcd_endpoint_ips                | etcd地址，如etcd为集群，地址以逗号分离（如：192.168.0.7,192.168.0.8,192.168.0.9） |                                                              |
+| etcd_port                        | etcd端口 (默认2379，如使用其它端口，请配置此参数)            | 2379                                                         |
+| disableMultiLogin                | 是否关闭多点登录  （True / False）                           | True                                                         |
+| elk_prefix                       | 日志索引                                                     | logstash                                                     |
+| keep_log_days                    | 日志留存时间（天）                                           | 7                                                            |
+| metrics_server_enable            | 是否安装metrics_server    （True / False）                   | True                                                         |
+| istio_enable                     | 是否安装istio       （True / False）                         | True                                                         |
+| persistence                      | enable                                                       | 是否启用持久化存储  （True /  False）（非测试环境建议开启数据持久化） |
+| storageClass                     | 启用持久化存储要求环境中存在已经创建好的 StorageClass（默认为空，则使用 default StorageClass） | “”                                                           |
+| containersLogMountedPath（可选） | 容器日志挂载路径                                             | "/var/lib/docker/containers"                                 |
+| external_es_url（可选）          | 外部es地址，支持对接外部es用                                 |                                                              |
+| external_es_port（可选）         | 外部es端口，支持对接外部es用                                 |                                                              |
+| local_registry (离线部署使用)    | 离线部署时，对接本地仓库 （使用该参数需将安装镜像使用scripts/download-docker-images.sh导入本地仓库中） |                                                              |
+### 运行部署
 ```shell
 kubectl apply -f kubesphere-installer.yaml
 ```
