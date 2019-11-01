@@ -117,19 +117,15 @@
   
 * [运维管理](practice/operation.md)
   * [使用kubesphere管理集群日志和监控](practice/kubesphere-log.md)
-  * [自动化ingress-nginx HTTPS]()
-  * [开启集群端口限制]()
-  * [集群时区配置]()
-  * [Preset设置]()
+    * [kubesphere常用操作])
+  * [自动化ingress-nginx HTTPS](practice/ingress-nginx-https.md)
+  * [Kubernetes一些配置](practice/Kubernetes-some-config.md)
   * [服务滚动升级](practice/service-rolling-update.md)
   * [配置最佳实践](practice/configuration-best-practice.md)
-* [数据持久化问题](practice/data-persistence-problem.md)
+  * [数据持久化问题](practice/data-persistence-problem.md)
   * [集群联邦](practice/federation.md)
-  * [集群数据备份和恢复]()
-  
-* [存储管理](practice/storage.md)
-  * [NFS](practice/nfs.md)
-    * [利用NFS动态提供Kubernetes后端存储卷](practice/using-nfs-for-persistent-storage.md)
+  * [集群数据备份和恢复](practice/kubernetes-data-backup.md)
+  * [kubernetes挂载阿里云nas存储作为StorageClass](practice/kubernetes-nas-storageclass.md)
   
 * [持续集成与发布](practice/ci-cd.md)
   * [git]()
@@ -142,15 +138,10 @@
   * [jenkins-x]()
     * [jenkins-x安装]()
     * [jenkins-x配置]()
-    * [使用jenkins-x在Kubernetes集群中发布应用]()
-      * [golang]()
-      * [java]()
-      * [html]()
-      * [php]()
+    * [使用jenkins-x在Kubernetes集群中发布应用](practice/jx-install-app.md)
 
 ## 开发指南
 
-* [开发指南概览](develop/index.md)
 * [client-go示例](develop/client-go-sample.md)
 * [Operator](develop/operator.md)
   * [operator-sdk](develop/operator-sdk.md)
