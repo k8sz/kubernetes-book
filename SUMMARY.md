@@ -80,7 +80,6 @@
 
 ## 用户指南
 
-* [用户指南](guide/index.md)
 * [资源对象配置](guide/resource-configuration.md)
   * [配置Pod的liveness和readiness探针](guide/configure-liveness-readiness-probes.md)
   * [Kubernetes每个Pod的resource](guide/kubernetes-pod-resource.md)
@@ -117,7 +116,7 @@
   * [kubeadm Nodes添加和删除](practice/kubeadm-nodes-addanddelete.md)
   
 * [运维管理](practice/operation.md)
-  * [使用kubesphere管理集群日志和监控](practice/master-ha.md)
+  * [使用kubesphere管理集群日志和监控](practice/kubesphere-log.md)
   * [自动化ingress-nginx HTTPS]()
   * [开启集群端口限制]()
   * [集群时区配置]()
