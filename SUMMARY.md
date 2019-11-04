@@ -75,37 +75,20 @@
   * [Aggregated API Server](concepts/aggregated-api-server.md)
   * [APIService](concepts/apiservice.md)
   * [Service Catalog](concepts/service-catalog.md)
-* [资源调度](concepts/scheduling.md)
+* [资源调度对象配置](concepts/scheduling.md)
   * [QoS（服务质量等级）](concepts/qos.md)
-
-## 用户指南
-
-* [资源对象配置](guide/resource-configuration.md)
   * [配置Pod的liveness和readiness探针](guide/configure-liveness-readiness-probes.md)
   * [Kubernetes每个Pod的resource](guide/kubernetes-pod-resource.md)
   * [配置Pod的Service Account](guide/configure-pod-service-account.md)
   * [Secret配置](guide/secret-configuration.md)
   * [管理namespace中的资源配额](guide/resource-quota-management.md)
+* [Pod节点选择器和亲和性和反亲和性](concepts/label.md)
+  
 * [命令使用](guide/command-usage.md)
   * [Docker用户过渡到kubectl命令行指南](guide/docker-cli-to-kubectl.md)
   * [kubectl命令概览](guide/using-kubectl.md)
   * [kubectl命令技巧大全](guide/kubectl-cheatsheet.md)
   * [使用etcdctl访问kubernetes数据](guide/using-etcdctl-to-access-kubernetes-data.md)
-* [集群安全性管理](guide/cluster-security-management.md)
-  * [管理集群中的TLS](guide/managing-tls-in-a-cluster.md)
-  * [kubelet的认证授权](guide/kubelet-authentication-authorization.md)
-  * [TLS bootstrap](guide/tls-bootstrapping.md)
-  * [创建用户认证授权的kubeconfig文件](guide/kubectl-user-authentication-authorization.md)
-  * [IP伪装代理](guide/ip-masq-agent.md)
-  * [使用kubeconfig或token进行用户身份认证](guide/auth-with-kubeconfig-or-token.md)
-  * [Kubernetes中的用户与身份认证授权](guide/authentication.md)
-  * [Kubernetes集群安全性配置最佳实践](guide/kubernetes-security-best-practice.md)
-* [访问Kubernetes集群](guide/access-kubernetes-cluster.md)
-  * [访问集群](guide/access-cluster.md)
-  * [使用kubeconfig文件配置跨集群认证](guide/authenticate-across-clusters-kubeconfig.md)
-  * [通过端口转发访问集群中的应用程序](guide/connecting-to-applications-port-forward.md)
-  * [使用service访问群集中的应用程序](guide/service-access-application-cluster.md)
-  * [从外部访问Kubernetes中的Pod](guide/accessing-kubernetes-pods-from-outside-of-the-cluster.md)
 
 ## 最佳实践
 
@@ -117,7 +100,7 @@
   
 * [运维管理](practice/operation.md)
   * [使用kubesphere管理集群日志和监控](practice/kubesphere-log.md)
-    * [kubesphere常用操作])
+    * [kubesphere常用操作]()
   * [自动化ingress-nginx HTTPS](practice/ingress-nginx-https.md)
   * [Kubernetes一些配置](practice/Kubernetes-some-config.md)
   * [服务滚动升级](practice/service-rolling-update.md)
@@ -151,7 +134,6 @@
 * [附录说明](appendix/index.md)
 * [Kubernetes中的应用故障排查](appendix/debug-kubernetes-services.md)
 * [Kubernetes相关资讯和情报链接](appendix/material-share.md)
-* [Docker最佳实践](appendix/docker-best-practice.md)
 * [使用技巧](appendix/tricks.md)
 * [分布式负载测试](practice/distributed-load-test.md)
 * [网络和集群性能测试](practice/network-and-cluster-perfermance-test.md)
