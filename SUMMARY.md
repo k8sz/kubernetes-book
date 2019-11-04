@@ -6,11 +6,11 @@
 
 ## Docker基础
 * [Docker概念](docker/docker-intro.md)
-  * [Docker安装](docker/docker-install.md)
-  * [Docker命令](docker/docker-command.md)
-  * [Dockerfile构建镜像](docker/docker-file.md)
-    * [Dockerfile多阶段构建](docker/dockerfile-multistage-build.md)
-    * [Dockerfile最佳实践](docker/dockerfile-best-practice.md)
+* [Docker安装](docker/docker-install.md)
+* [Docker命令](docker/docker-command.md)
+* [Dockerfile构建镜像](docker/docker-file.md)
+  * [Dockerfile多阶段构建](docker/dockerfile-multistage-build.md)
+  * [Dockerfile最佳实践](docker/dockerfile-best-practice.md)
 
 ## kubernetes概念与原理
 
