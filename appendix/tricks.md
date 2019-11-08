@@ -265,3 +265,6 @@ ETCDCTL_API=3 etcdctl del /registry/pods/default/pod-to-be-deleted-0
 这时API server就不会再看到该pod的信息。
 
 如何使用etcdctl查看etcd中包括的kubernetes元数据，请参考：[使用etcdctl访问kubernetes数据](../guide/using-etcdctl-to-access-kubernetes-data.md)
+
+## 10.关闭端口限制
+kubernetes默认node开启的端口为30000-，我们希望使用nodepost更多的端口

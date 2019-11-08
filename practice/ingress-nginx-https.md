@@ -4,8 +4,8 @@ cert-manager是本地[Kubernetes](https://kubernetes.io/)证书管理控制器�
 本文主要说明如何在kubernetes安装和设置cert-manager。
 
 ## HELM和Inagess-nginx
-```bash
 helm安装请参考[kubernetes之Helm安装](https://www.k8sz.com/post/kuberneteshelm/)
+```bash
 # ingress-nginx
 helm install -n nginx-ingress --namespace kube-system stable/nginx-ingress
 ```

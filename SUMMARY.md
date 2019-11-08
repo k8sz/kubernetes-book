@@ -102,7 +102,6 @@
   * [使用kubesphere管理集群日志和监控](practice/kubesphere-log.md)
     * [kubesphere常用操作]()
   * [自动化ingress-nginx HTTPS](practice/ingress-nginx-https.md)
-  * [Kubernetes一些配置](practice/Kubernetes-some-config.md)
   * [服务滚动升级](practice/service-rolling-update.md)
   * [配置最佳实践](practice/configuration-best-practice.md)
   * [数据持久化问题](practice/data-persistence-problem.md)
@@ -118,8 +117,8 @@
   * [skaffold]()
     * [skaffold 概述]()
   * [jenkins流水线语法]()
-  * [jenkins-x]()
-    * [jenkins-x安装]()
+  * [jenkins-x](devops/jenkins-x.md)
+    * [jenkins-x安装](devops/jenkins-x-install.md)
     * [jenkins-x配置]()
     * [使用jenkins-x在Kubernetes集群中发布应用](practice/jx-install-app.md)
 
