@@ -82,7 +82,7 @@
   * [配置Pod的Service Account](guide/configure-pod-service-account.md)
   * [Secret配置](guide/secret-configuration.md)
   * [管理namespace中的资源配额](guide/resource-quota-management.md)
-* [Pod节点选择器和亲和性和反亲和性](concepts/label.md)
+  * [Pod节点选择器和亲和性和反亲和性](guide/pod-affinity.md)
   
 * [命令使用](guide/command-usage.md)
   * [Docker用户过渡到kubectl命令行指南](guide/docker-cli-to-kubectl.md)
