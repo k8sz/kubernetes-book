@@ -31,6 +31,26 @@ DaemonSet 也需要一个 `.spec`配置段。
 Pod 除了必须字段外，在 DaemonSet 中的 Pod 模板必须指定合理的标签（查看 [pod selector](#pod-selector)）。
 
 在 DaemonSet 中的 Pod 模板必需具有一个值为 `Always` 的 [`RestartPolicy`](https://kubernetes.io/docs/user-guide/pod-states)，或者未指定它的值，默认是 `Always`。
+```yaml
+kind: DaemonSet
+apiVersion: extensions/v1beta1
+metadata:
+  name: nginx-ds
+  labels:
+    k8s-app: nginx
+spec:
+  template:
+    metadata:
+      labels:
+        k8s-app: nginx
+    spec:
+      containers:
+      - image: nginx:1.7.9
+        name: nginx
+        ports:
+        - name: http
+          containerPort: 80
+```
 
 ### Pod Selector
 
