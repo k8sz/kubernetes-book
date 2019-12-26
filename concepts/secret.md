@@ -157,4 +157,56 @@ namespace
 token
 ```
 
+### 文件(TLS证书)
 
+除了配置成环境变量我们在很多地方也会使用到文件的方式来存放密钥信息,最常用的就是HTTPS这样的TLS证书,使用证书程序(比如支付宝证书没法使用环境变量来配置证书)需要一个固定的物理地址去加载这个证书,我们吧之前配置用户名和密码作为文件的方式挂在到某个目录下
+
+首先把所需要的证书挂载到指定的namespace
+```sh
+kubectl create secret generic alipay --from-file=*.crt --from-file=*.crt --from-file=*.crt -n stating
+```
+
+#### 挂载在指定的路径
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: secret
+spec:
+  containers:
+  - name: alipay
+    image: tomcat:1.0.0
+    volumeMounts:
+    - name: foo
+      mountPath: "/home/tls"
+      readOnly: true
+  volumes:
+  - name: foo
+    secret:
+      secretName: alipay
+      defaultMode: 256
+```
+JSON规范不支持八进制表示法，因此对于0400权限使用值256,0777使用值为511。如果您使用yaml代替pod的json，则可以使用八进制表示法以更自然的方式指定权限,
+
+#### 挂载在指定路径
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: secret
+spec:
+  containers:
+  - name: alipay
+    image: tomcat:1.0.0
+    volumeMounts:
+    - name: foo
+      mountPath: "/home/tls"
+      readOnly: true
+  volumes:
+  - name: alipay
+    secret:
+      secretName: alipay
+      items:
+      - key: *.car
+        path: my-group/my-username
+```
