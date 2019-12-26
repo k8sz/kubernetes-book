@@ -110,7 +110,7 @@
   * [kubernetes挂载阿里云nas存储作为StorageClass](practice/kubernetes-nas-storageclass.md)
   
 * [持续集成与发布](practice/ci-cd.md)
-  * [git]()
+  * [git常用命令](devops/git-command.md)
   * [gitlab]()
   * [kustomize]()
     * [kustomize概述]()
