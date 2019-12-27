@@ -119,7 +119,6 @@
   * [jenkins流水线语法]()
   * [jenkins-x](devops/jenkins-x.md)
     * [jenkins-x安装](devops/jenkins-x-install.md)
-    * [jenkins-x配置]()
     * [使用jenkins-x在Kubernetes集群中发布应用](practice/jx-install-app.md)
 
 ## 开发指南
