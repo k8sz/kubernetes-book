@@ -41,4 +41,46 @@ export PATH=$PATH:~/.jx/bin
 echo 'export PATH=$PATH:~/.jx/bin' >> ~/.bashrc
 ```
 
-### 修改
+### jx系统安装
+```bash
+jx install --on-premise --cloud-environment-repo='https://github.com/linjunjianbaba/cloud-environments.git' --provider=kubernetes --domain='domain.com' --no-default-environments --static-jenkins --git-provider-url='https://github.com' --git-username='githubname' --git-api-token='xxxxxxxxxxxxxxxxxxxxxxxxxxxxx' --ingress-service=nginx-ingress
+```
+
+### 系统镜像修改
+由于有一部分镜像服务器在国外，国内需要科学上网才能下载，也可以直接修改镜像服务器
+```bash
+gcr.io         对应国内 gcr.azk8s.cn
+k8s.gcr.io     对应国内 mirrorgooglecontainers
+#如：image: gcr.azk8s.cn/jenkinsxio/jenkinsx:0.0.80
+```
+安装完成后终端会打印对应的密码，也可以在~/.jx/ 下查看
+
+### 在K8S上添加gitlab token
+jenkins需要到gitlab上拉取代码，需要凭证，将gitab 的用户和token直接挂载在kubernetes sectet上即可
+```yaml
+apiVersion: v1
+data:
+  password: YTdBZHE2TWlBS1RaWF
+  username: bGluemhpYmlhbwo
+kind: Secret
+metadata:
+  annotations:
+    jenkins.io/credentials-description: API Token for acccessing http://gitlab.com
+      Git service inside pipelines
+    jenkins.io/name: gitlab
+    jenkins.io/url: http://gitlab.com
+  labels:
+    jenkins.io/created-by: jx
+    jenkins.io/credentials-type: usernamePassword
+    jenkins.io/kind: git
+    jenkins.io/service-kind: gitlab
+  name: jx-pipeline-git-gitlab-gitlab
+  namespace: jx
+type: Opaque
+```
+
+当然如果你的代码仓库使用了github可以使用jx的原生功能，这样更符合gitops
+
+## 参考
+
+* https://jenkins-x.io/docs/managing-jx/old/install-on-cluster/
