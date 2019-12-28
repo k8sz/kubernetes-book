@@ -81,6 +81,26 @@ type: Opaque
 
 当然如果你的代码仓库使用了github可以使用jx的原生功能，这样更符合gitops
 
+### 修改dokcer
+vim /etc/docker/daemon.json
+```json
+{
+    "exec-opts": ["native.cgroupdriver=systemd"],
+    "log-driver": "json-file",
+    "log-opts": {
+        "max-size": "100m",
+        "max-file": "10"
+    },
+    "bip": "169.254.123.1/24",
+    "oom-score-adjust": -1000,
+    "registry-mirrors": ["https://pqbap4ya.mirror.aliyuncs.com"],
+    "storage-driver": "overlay2",
+    "storage-opts":["overlay2.override_kernel_check=true"],
+    "insecure-registries": ["10.88.255.48:5000"],
+    "live-restore": true
+}
+```
+
 ## 参考
 
 * https://jenkins-x.io/docs/managing-jx/old/install-on-cluster/
