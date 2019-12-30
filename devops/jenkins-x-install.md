@@ -101,6 +101,63 @@ vim /etc/docker/daemon.json
 }
 ```
 
+### maven Dockerfile
+```bash
+FROM centos:7
+
+WORKDIR /home/jenkins
+
+RUN yum install -y wget make curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker kde-l10n-Chinese glibc-common \
+&& yum remove -y git \
+&& wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.23.0.tar.xz \
+&& tar xf git-2.23.0.tar.xz \
+&& cd git-2.23.0 \
+&& ./configure \
+&& make  && make install \
+&& cd /usr/bin \
+&& rm -f git \
+&& ln -s  /usr/local/git/bin/git git \
+&& rm -rf /home/jenkins/git-2.23.0 /home/jenkins/git-2.23.0.tar.xz \
+&& localedef -c -f UTF-8 -i zh_CN zh_CN.utf8 \
+&& echo "LANG="zh_CN.utf8"" > /etc/locale.conf \
+&& yum clean all
+
+ENV LANG zh_CN.utf8
+
+COPY opt /usr/local/
+
+ENV JAVA_HOME /usr/local/java
+
+ENV MAVEN_HOME /usr/local/maven
+
+ENV CLASSPATH .:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+
+ENV PATH $PATH:$JAVA_HOME/bin:$MAVEN_HOME/bin
+
+COPY kubectl /usr/bin/
+
+COPY docker /usr/bin/
+
+COPY skaffold /usr/bin/
+
+COPY jx /usr/bin
+```
+
+### node Dockerfile
+```bash
+FROM gcr.azk8s.cn/jenkinsxio/builder-nodejs:2.0.1005-335
+
+MAINTAINER ZB <zb@k8sz.com>
+
+RUN npm install -g cnpm --registry=https://registry.npm.taobao.org \
+&& cnpm install -g antd axios babel-plugin-import mobx mobx-react mobx-react-devtools nprogress react react-app-rewire-less  react-app-rewired  react-dom react-router-dom react-scripts history path \
+&& curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --nightly \
+&& yarn config set registry https://registry.npm.taobao.org \
+&& cnpm install -g yrm \
+&& yrm ls
+```
+
+
 ## 参考
 
 * https://jenkins-x.io/docs/managing-jx/old/install-on-cluster/
